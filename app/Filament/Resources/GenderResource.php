@@ -52,7 +52,7 @@ class GenderResource extends Resource
     {
         return [
             //
-        ];
+        ]; 
     }
 
     public static function getPages(): array
