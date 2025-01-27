@@ -21,8 +21,6 @@ class MaritalstatusResource extends Resource
 
     protected static ?string $navigationLabel = 'Marital Status';
 
-    protected static ?string $navigationGroup = 'Setup';
-
     public static function form(Form $form): Form
     {
         return $form

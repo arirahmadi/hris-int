@@ -21,7 +21,6 @@ class CityResource extends Resource
 
     protected static ?string $navigationLabel = 'City';
 
-    protected static ?string $navigationGroup = 'Setup';
 
     public static function form(Form $form): Form
     {

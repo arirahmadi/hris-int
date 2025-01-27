@@ -22,8 +22,6 @@ class EmpMasterResource extends Resource
 
     protected static ?string $navigationLabel = 'Employee';
 
-    protected static ?string $navigationGroup = 'HR Data';
-
     public static function form(Form $form): Form
     {
         return $form
