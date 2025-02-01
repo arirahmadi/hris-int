@@ -18,16 +18,27 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsPlugin;
+use App\Filament\Pages\Auth\LoginCustom;
+use App\Filament\Pages\Auth\RegisterCustom;
 
 class HrisPanelProvider extends PanelProvider
 {
+    public function abc()
+    {
+        return 1/0;
+    }
     public function panel(Panel $panel): Panel
     {
         return $panel
+           // ->brandName(fn()=> auth()->user()->name)
+            //->brandName(HRIS DGE)
             ->default()
             ->id('hris')
             ->path('hris')
-            ->login()
+            ->login(action: LoginCustom::class)
+            ->registration(RegisterCustom::class)
+            ->passwordReset()
+            ->profile()
             ->colors([
                 'primary' => Color::Amber,
             ])
